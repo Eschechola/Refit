@@ -1,8 +1,8 @@
-﻿using RefitProject.Entities;
-using RefitProject.Interfaces;
+﻿using Refit;
+using RefitProject.Entities;
 using System.Threading.Tasks;
+using RefitProject.Interfaces;
 using System.Collections.Generic;
-using Refit;
 
 namespace RefitProject.Services
 {
@@ -13,7 +13,7 @@ namespace RefitProject.Services
 
         public CustomerService()
         {
-            _apiUrl = "https://localhost:44351/api/v1";
+            _apiUrl = "https://refitapi.herokuapp.com/api/v1";
             _customerService = RestService.For<ICustomerService>(_apiUrl);
         }
 
